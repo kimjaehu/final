@@ -1,12 +1,14 @@
 import React from 'react'
+import AppBar from '@material-ui/core/AppBar';
+import Icon from '@material-ui/core/Icon';
 
 class NavBar extends React.Component {
   render () {
     return (
-      <nav className="navbar">
-        this is logo
-        <img src="https://via.placeholder.com/150" href="/" className="navbar-logo" />
-      </nav>
+      <AppBar color="primary" position="static">
+        <span><Icon>work_outline</Icon></span>
+        <span><Icon>account_box</Icon></span>
+      </AppBar>
     )
   }
 }
