@@ -1,13 +1,13 @@
 import React from 'react'
-import NavBar from './NavBar.jsx';
+import NavBar from './NavBar.jsx'
+import Main from './Main.jsx'
 
 class App extends React.Component {
   render () {
     return (
       <div>
-        Navbar
         <NavBar />
-
+        <Main />
       </div>
     )
   }

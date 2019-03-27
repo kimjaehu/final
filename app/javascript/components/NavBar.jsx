@@ -5,7 +5,7 @@ class NavBar extends React.Component {
     return (
       <nav className="navbar">
         this is logo
-        <img src="/assets/images/logo.png" href="/" className="navbar-logo" />
+        <img src="https://via.placeholder.com/150" href="/" className="navbar-logo" />
       </nav>
     )
   }
