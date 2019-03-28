@@ -10,25 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_030254) do
+ActiveRecord::Schema.define(version: 2019_03_28_142304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "aboute_mes", force: :cascade do |t|
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "carrers", force: :cascade do |t|
-    t.string "job_category"
-    t.string "job_title"
-    t.string "month_experience"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "profiles", force: :cascade do |t|
     t.string "phone_number"
@@ -36,8 +21,10 @@ ActiveRecord::Schema.define(version: 2019_03_28_030254) do
     t.string "street_address"
     t.string "region"
     t.string "country"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,4 +35,5 @@ ActiveRecord::Schema.define(version: 2019_03_28_030254) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "profiles", "users"
 end
